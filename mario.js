@@ -1,7 +1,5 @@
 
 drawPyramid(5);
-
-
 /**
  * drawPyramid
  *
@@ -23,18 +21,27 @@ function drawPyramid(height) {
         // build up a string for this row
         var rowStr = "";
         for (var i = 0; i < numSpaces; i++) {
-            rowStr += "."; // QUIZ: what happens if we use a space (" ") instead of a period?
+            rowStr += " "; // QUIZ: what happens if we use a space (" ") instead of a period?
         }
         for (var i = 0; i < numBricks; i++) {
             rowStr += "#";
         }
 
         // you can delete this now
-        console.log(rowStr)
-
+        // console.log(rowStr)
+        // div.insertAdjacentHTML( 'beforeend', rowStr );
         // TODO 1
         // create an element whose inner text is rowStr,
         // and insert it as a child of the container <div id="pyramid">
+        textElem = document.createTextNode(rowStr);
+        // create a <p> element
+        rowElem = document.createElement("p");
+        rowElem.appendChild(textElem);
+        // set rowStr to be the inner text of the <p>
+        rowElem.innerHTML = rowStr;
+        // insert the paragraph as a child of the <div>
+        // container.appendChild(rowElem);
+        document.getElementById("pyramid").appendChild(rowElem);
 
     }
 }
