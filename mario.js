@@ -28,20 +28,20 @@ function drawPyramid(height) {
         }
 
         // you can delete this now
-        // console.log(rowStr)
-        // div.insertAdjacentHTML( 'beforeend', rowStr );
+         console.log(rowStr)
+        // div.insertAdjacentHTML( 'before end', rowStr );
         // TODO 1
         // create an element whose inner text is rowStr,
         // and insert it as a child of the container <div id="pyramid">
-        textElem = document.createTextNode(rowStr);
+//        textElem = document.createTextNode(rowStr);
         // create a <p> element
         rowElem = document.createElement("p");
-        rowElem.appendChild(textElem);
+//        rowElem.appendChild(textElem);
         // set rowStr to be the inner text of the <p>
         rowElem.innerHTML = rowStr;
         // insert the paragraph as a child of the <div>
-        // container.appendChild(rowElem);
-        document.getElementById("pyramid").appendChild(rowElem);
+//         container.appendChild(rowElem);
+//        document.getElementById("pyramid").appendChild(rowElem);
 
     }
 }
